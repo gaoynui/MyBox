@@ -4,6 +4,8 @@
 集成md编辑器editormd
 数据库API JPA/JDBC
 
+JPA Java持久层API
+
 概念：
 javaBean可重用组件。JavaBean 通过提供符合一致性设计模式的公共方法将内部域暴露成员属性，set和get方法获取。
 
