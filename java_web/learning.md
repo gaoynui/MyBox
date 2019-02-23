@@ -15,6 +15,10 @@ mybatis 持久层框架，它支持定制化 SQL、存储过程以及高级映�
 
 SSH structs+spring+hibernate MVC开发模式
 
+servlet容器 在服务器端使用Java来动态生成网页。Servlet是在javax.serlvet包中定义的一个接口
+
+tomcat服务器是一个免费的开放源代码的Web 应用服务器。具有处理HTML页面的功能，另外它还是一个Servlet和JSP容器，独立的Servlet容器是Tomcat的默认模式。
+
 ## IDEA
 客户端 + 服务端 + 服务器
 API 协议 操作指令
