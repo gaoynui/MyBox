@@ -19,6 +19,14 @@ servlet容器 在服务器端使用Java来动态生成网页。Servlet是在java
 
 tomcat服务器是一个免费的开放源代码的Web 应用服务器。具有处理HTML页面的功能，另外它还是一个Servlet和JSP容器，独立的Servlet容器是Tomcat的默认模式。
 
+POJO 无任何限制普通java对象
+
+GAV Maven坐标，唯一标识jar包
+
+ORM object relation mapping 对象关系映射，对象领域建模与底层数据之间的转换
+
+一方库内部库，二方库公司库，三方库外部库
+
 ## IDEA
 客户端 + 服务端 + 服务器
 API 协议 操作指令
