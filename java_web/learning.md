@@ -21,6 +21,8 @@ tomcat服务器是一个免费的开放源代码的Web 应用服务器。具有�
 
 JSP java saerver pages java服务器页面
 
+JVM java virtual machine
+
 POJO 无任何限制普通java对象
 
 GAV Maven坐标，唯一标识jar包
