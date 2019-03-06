@@ -23,7 +23,7 @@ JSP java server pages java服务器页面
 
 JVM java virtual machine
 
-POJO 无任何限制普通java对象
+POJO 无任何限制普通java对象 plain ordinary java object
 
 GAV Maven坐标，唯一标识jar包
 
