@@ -34,7 +34,7 @@ ORM object relation mapping 对象关系映射，对象领域建模与底层数�
 ## IDEA
 客户端 + 服务端 + 服务器
 API 协议 操作指令
-J2EE开发（企业级）
+J2EE开发（企业级）Java 2 Platform, Enterprise Edition
 
 socket:长连接的通讯模型
 DatagramSocket UDP
