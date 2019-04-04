@@ -1,0 +1,150 @@
+内存：
+1.栈存放临时数据（函数参数，返回值，局部变量）：
+main(){
+int b;
+char s[]="abc";
+char *s;
+}
+
+2.数据段存放全局变量
+
+3.堆存放new，动态内存
+
+4.自由存储区存放malloc
+
+5.常量存储区
+
+优先级：
+.  &  %  <=  &&  =
+
+Linux命令：
+查看目录大小：du -sh dirName
+切换其他用户：su
+退出：q
+文件类型：file
+找档案：locate,find
+cd,pwd,mkdir,rmdir,ls,cp,rm,mv,cat,tac
+
+JVM将内存划分为：
+Method Area（Non-Heap）（方法区） ,Heap（堆） , Program Counter Register（程序计数器） ,   VM Stack（虚拟机栈，也有翻译成JAVA 方法栈的）,Native Method Stack  （ 本地方法栈 ）
+
+JAVA程序的工作过程：
+一个 Java 源程序文件，会被编译为字节码文件（以 class 为扩展名），每个java程序都需要运行在自己的JVM上，然后告知 JVM 程序的运行入口，再被 JVM 通过字节码解释器加载运行。
+
+CGI效率低于servlet
+servlet是单例的，structs2是多例的
+单例：所有请求都用一个对象来处理，对象在整个系统中只有一份。（service和dao层对象）
+多例：每个请求用一个新的对象来处理，可以有多个对象。(action)
+
+Servlet（JSP）的生命周期分为5个阶段：加载、创建、初始化、处理客户请求、卸载。
+(1)加载：容器通过类加载器使用servlet类对应的文件加载servlet
+(2)创建：通过调用servlet构造函数创建一个servlet对象
+(3)初始化：调用init方法初始化
+(4)处理客户请求：每当有一个客户请求，容器会创建一个线程来处理客户请求(jsp.service())
+(5)卸载：调用destroy方法让servlet自己释放其占用的资源
+
+字符串创建方式是否相等问题
+string s1 = new
+string s2 = new
+equals比较true/==比较false
+
+string s1 = "abc"
+string s2 = "abc"
+均为true
+
+进程和线程的区别
+1.进程是系统分配和管理资源的基本单位；线程是处理器调度的基本单位
+2.线程共享进程的资源如内存、IO、CPU；线程资源独立
+
+java中线程为抢占式调度，线程平台独立。
+
+长连接短连接区别
+
+hadoop分布式基础架构
+zookeeper 是hadoop子项目
+
+dubbo
+Dubbo是阿里巴巴公司开源的一个高性能优秀的分布式服务框架，使得应用可通过高性能的 RPC 实现服务的输出和输入功能，可以和Spring框架无缝集成。
+Dubbo是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。
+RPC remote procedure call
+
+JSON javaScript object notation轻量级数据交换格式
+
+线程安全：
+list下vector
+map下的hashTable
+线程不安全：
+list下的arrayList、linkedList
+map下的hashMap
+
+hashTable和hashMap的区别
+table使用Enumeration(枚举类)
+map使用iterator（迭代类）
+同步不同，哈希值不同
+
+iterator可以删除元素，enumeration不行
+
+Spring AOP aspect oriented programming 面向切面编程
+
+object类常见三种方法：toSpring\equals\hashCode
+
+serializable可序列化
+synchronized同步的
+
+static不能使用this
+
+接口里的方法只能用public和abstract修饰，或者不写默认public abstract
+接口里的默认修饰变量属性：public static final
+
+java类型转化：byte,short,char->int->long->float->double
+boolean
+
+extends和implements区别：extends 是继承父类，只要那个类不是声明为final或者那个类定义为abstract的就能继承，JAVA中不支持多重继承，但是可以用接口来实现，这样就用到了implements，继承只能继承一个类，但implements可以实现多个接口，用逗号分开就行了。
+
+集合扩容问题：
+list下vector 1倍
+list下arrayList 0.5倍 + 1
+set下hashSet 1倍
+map下hashMap 1倍
+
+重载(overload)和重写(覆盖，override)的区别：
+重载不能参数相同。重写必须参数相同
+重载可以在类内部实现。重写必须继承
+static方法不能重写:该子类的方法会把原来继承过来的父类的方法隐藏，而不是重写
+
+子类在重写父类方法时，方法的访问权限不能小于原访问权限。接口中方法的默认访问权限就是public，所以子类重写后只能是public
+
+多态：同一个接口，使用不同的实例而执行不同操作
+三个同时存在必要条件：继承，重写，父类引用指向子类对象。
+
+引用指向对象：
+className c = new className();
+两个对象，一个是引用对象c，实体对象className();
+
+虚方法：
+虚方法的存在是为了多态
+
+抽象类(abstract void className();)：不定义抽象函数，子类通过继承父类对方法实现重载。
+接口就是虚到极点的抽象类。
+
+派生类对象，构造函数执行顺序：
+基类构造函数->派生类对象成员构造函数->派生类本身构造函数
+
+一个类至少有一个构造方法
+
+volatile
+变量的值可能随时会被别的线程修改，使用volatile修饰的变量会强制将修改的值立即写入主存，使缓存中的值失效。禁止指令重排。
+volatile不具备原子性，这是volatile与java中的synchronized、java.util.concurrent.locks.Lock最大的功能差异
+
+JAVA线程的两种创建方式：
+继承thread类。要把线程执行的代码放到run方法中（重写），启动线程使用start方法。如果使用run方法，则这个不叫线程的运行，而是叫普通方法的调用。
+实现runnable接口
+
+重写equals()，hashcode()
+先通过hashcode来比较，如果hashcode相等，那么就用equals方法来比较两个对象是否相等
+
+装箱与拆箱是基本数据类型之间的转换。
+装箱：int->integer
+integer必须实例化后才可使用
+
+import只能导到当前层
