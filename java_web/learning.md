@@ -1,8 +1,4 @@
 ## 概念
-框架：后端spring boot
-前端bootstrap + thymeleaf/jquery
-集成md编辑器editormd
-数据库API JPA/JDBC
 
 JPA Java持久层API
 
@@ -31,48 +27,27 @@ ORM object relation mapping 对象关系映射，对象领域建模与底层数�
 
 一方库内部库，二方库公司库，三方库外部库
 
-## IDEA
-客户端 + 服务端 + 服务器
-API 协议 操作指令
 J2EE开发（企业级）Java 2 Platform, Enterprise Edition
 
 socket:长连接的通讯模型
 DatagramSocket UDP
 ServerSocket TCP
 
-短链接的通讯协议：http
+http & websocket
+
 http如何长连接：
 业务层面：http可以通过循环做长连接
 底层：基于TCP
 
-spring MVC
-
 部署云服务：
 负载均衡：大数据集群
 
-一般数据库端口3306
+MySQL数据库端口3306
 
 字符集--utf8mb4(便于存储emoji)
-
-JavaWeb工具准备：
-IDEA,MYSQL,数据库模型设计(pdshell)
-前端UI框架：bootstrap(响应式布局，自适应)
-
-扫描标签@
 
 spring boot
 结合了常用插件（包含了tomCat）
 
-请求-spring boot-controller层
-
-RequestMapping
-
-alt + enter解决
-
-1.pull
-2.解决冲突
-3.pull
-4.commit
-5.push
 
 Dao date access object 数据访问对象
