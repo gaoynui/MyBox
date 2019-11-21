@@ -1,12 +1,5 @@
 
 
-Linux命令：
-查看目录大小：du -sh dirName
-切换其他用户：su
-退出：q
-文件类型：file
-找档案：locate,find
-cd,pwd,mkdir,rmdir,ls,cp,rm,mv,cat,tac
 
 JVM将内存划分为：
 Method Area（Non-Heap）（方法区） ,Heap（堆） , Program Counter Register（程序计数器） ,   
