@@ -9,7 +9,7 @@ JAVA程序的工作过程：
 一个 Java 源程序文件，会被编译为字节码文件（以 class 为扩展名），每个java程序都需要运行在自己的JVM上，然后告知 JVM 程序的运行入口，
 再被 JVM 通过字节码解释器加载运行。
 
-CGI效率低于servlet
+CGI（common gateway interface）效率低于servlet
 servlet是单例的，struts2是多例的
 单例：所有请求都用一个对象来处理，对象在整个系统中只有一份。（service和dao层对象）
 多例：每个请求用一个新的对象来处理，可以有多个对象。(action)
