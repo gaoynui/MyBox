@@ -25,10 +25,12 @@ Servlet（JSP）的生命周期分为5个阶段：加载、创建、初始化、
 string s1 = new
 string s2 = new
 equals比较true/==比较false
+==比较的是内存地址，而new出来的对象放在堆中，所以不同。
 
 string s1 = "abc"
 string s2 = "abc"
 均为true
+常量放在方法区的常量池中，取到的是同一个常量。
 
 进程和线程的区别
 1.进程是系统分配和管理资源的基本单位；线程是处理器调度的基本单位
