@@ -9,7 +9,7 @@ SSM spring+springMVC+MyBatis 由Spring、MyBatis两个开源框架整合而成�
 
 mybatis 持久层框架，它支持定制化 SQL、存储过程以及高级映射
 
-SSH structs+spring+hibernate MVC开发模式
+SSH struts+spring+hibernate MVC开发模式
 
 servlet容器 在服务器端使用Java来动态生成网页。Servlet是在javax.serlvet包中定义的一个接口
 
