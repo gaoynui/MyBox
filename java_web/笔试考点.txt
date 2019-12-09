@@ -76,11 +76,11 @@ boolean
 extends和implements区别：extends 是继承父类，只要那个类不是声明为final或者那个类定义为abstract的就能继承，JAVA中不支持多重继承，
 但是可以用接口来实现，这样就用到了implements，继承只能继承一个类，但implements可以实现多个接口，用逗号分开就行了。
 
-集合扩容问题：
-list下vector 1倍
-list下arrayList 0.5倍 + 1
-set下hashSet 1倍
-map下hashMap 1倍
+集合扩容问题(定义一个集合对象会给其赋一个默认初始长度，如果添加的元素数量超过初始长度则会进行扩容)：
+list下vector length * 2
+list下arrayList length * 1.5 + 1
+set下hashSet length * 2
+map下hashMap length * 2
 
 重载(overload)和重写(覆盖，override)的区别：
 重载不能参数相同。重写必须参数相同
