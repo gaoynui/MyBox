@@ -10,7 +10,7 @@ JAVA程序的工作过程：
 再被 JVM 通过字节码解释器加载运行。
 
 CGI效率低于servlet
-servlet是单例的，structs2是多例的
+servlet是单例的，struts2是多例的
 单例：所有请求都用一个对象来处理，对象在整个系统中只有一份。（service和dao层对象）
 多例：每个请求用一个新的对象来处理，可以有多个对象。(action)
 
@@ -31,14 +31,6 @@ string s1 = "abc"
 string s2 = "abc"
 均为true
 常量放在方法区的常量池中，取到的是同一个常量。
-
-进程和线程的区别
-1.进程是系统分配和管理资源的基本单位；线程是处理器调度的基本单位
-2.线程共享进程的资源如内存、IO、CPU；线程资源独立
-
-java中线程为抢占式调度，线程平台独立。
-
-长连接短连接区别
 
 hadoop分布式基础架构
 zookeeper 是hadoop子项目
@@ -67,6 +59,8 @@ iterator可以删除元素，enumeration不行
 Spring AOP aspect oriented programming 面向切面编程
 
 object类常见三种方法：toSpring\equals\hashCode
+重写equals()，hashcode()
+先通过hashcode来比较，如果hashcode相等，那么就用equals方法来比较两个对象是否相等
 
 serializable可序列化
 synchronized同步的
@@ -117,13 +111,15 @@ volatile
 变量的值可能随时会被别的线程修改，使用volatile修饰的变量会强制将修改的值立即写入主存，使缓存中的值失效。禁止指令重排。
 volatile不具备原子性，这是volatile与java中的synchronized、java.util.concurrent.locks.Lock最大的功能差异
 
+进程和线程的区别
+1.进程是系统分配和管理资源的基本单位；线程是处理器调度的基本单位
+2.线程共享进程的资源如内存、IO、CPU；线程资源独立
+
+java中线程为抢占式调度，线程平台独立。
 JAVA线程的两种创建方式：
 继承thread类。要把线程执行的代码放到run方法中（重写），启动线程使用start方法。如果使用run方法，则这个不叫线程的运行，
 而是叫普通方法的调用。
 实现runnable接口
-
-重写equals()，hashcode()
-先通过hashcode来比较，如果hashcode相等，那么就用equals方法来比较两个对象是否相等
 
 装箱与拆箱是基本数据类型之间的转换。
 装箱：int->integer
