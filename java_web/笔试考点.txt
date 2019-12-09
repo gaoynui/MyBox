@@ -32,6 +32,9 @@ string s2 = "abc"
 均为true
 常量放在方法区的常量池中，取到的是同一个常量。
 
+超过127的整数不放在常量池中，浮点数无常量池。
+String s = new String("hello" + "world")实际上只创建了两个对象，一个s在堆中；"hello"和"world"会在编译时自动优化成一个字符串放入常量池。
+
 hadoop分布式基础架构
 zookeeper 是hadoop子项目
 
