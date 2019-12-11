@@ -59,6 +59,24 @@ map使用iterator（迭代类）
 
 iterator可以删除元素，enumeration不行
 
+HashSet:
+Set<String> set = new HashSet<String>();
+set.add("A");
+Iterator iterator = set.iterator();
+while(iterator.hasNext()){
+  System.out.println(iterator.next());
+}
+
+HashMap:
+Map map = new HashMap();
+map.put("A", 1);
+Iterator iter = map.entrySet().iterator();
+while (iter.hasNext()) {
+    Map.Entry entry = (Map.Entry) iter.next();
+    Object key = entry.getKey();
+    Object val = entry.getValue();
+}
+
 Spring AOP aspect oriented programming 面向切面编程
 
 object类常见三种方法：toSpring\equals\hashCode
