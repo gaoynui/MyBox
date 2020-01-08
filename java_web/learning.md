@@ -1,8 +1,6 @@
-## 概念
 
 JPA Java持久层API
 
-概念：
 javaBean可重用组件。JavaBean 通过提供符合一致性设计模式的公共方法将内部域暴露成员属性，set和get方法获取。
 
 SSM spring+springMVC+MyBatis 由Spring、MyBatis两个开源框架整合而成。常作为数据源较简单的web项目的框架。
@@ -17,9 +15,10 @@ tomcat服务器是一个免费的开放源代码的Web 应用服务器。具有�
 
 JSP java server pages java服务器页面
 
-JVM java virtual machine
-
 POJO 无任何限制普通java对象 plain ordinary java object
+
+DAO 数据访问对象，面向对象的数据库访问接口。封装对数据库接口
+DTO 数据传输对象，类似entity
 
 GAV Maven坐标，唯一标识jar包
 
@@ -39,16 +38,9 @@ http如何长连接：
 业务层面：http可以通过循环做长连接
 底层：基于TCP
 
-部署云服务：
-负载均衡：大数据集群
-
 MySQL数据库端口3306
 redis 6379
 
 字符集--utf8mb4(便于存储emoji)
-
-spring boot
-结合了常用插件（包含了tomCat）
-
 
 Dao date access object 数据访问对象
