@@ -159,3 +159,7 @@ public void getDays(Integer... days) {
     }
   }
 }
+
+Assert.notNull()的使用：
+import org.springframework.util.Assert;
+Assert.notNull(name, "name can not be null");
