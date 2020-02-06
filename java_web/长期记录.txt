@@ -149,13 +149,11 @@ integer必须实例化后才可使用
 import只能导到当前层
 
 对不确定数量的参数：
-public void getDays(Integer... days) {
+public void getDays(Integer ... days) {
   if(days != null && days.length != 0) {
-    Integer[] arr$ = days;
-    int len = days.length;
-    
-    for(int i$ = 0; i$ < len; i$++) {
-      int day = arr$[i$];
+    int[] myDays = new int(days.length);
+    for(int i = 0; i < len; i++) {
+      myDays[i] = days[i];
     }
   }
 }
