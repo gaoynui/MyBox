@@ -161,3 +161,5 @@ public void getDays(Integer ... days) {
 Assert.notNull()的使用：
 import org.springframework.util.Assert;
 Assert.notNull(name, "name can not be null");
+
+Thread.sleep()是用于提醒OS进行CPU竞争。当一个线程sleep 1000ms时它不再参与CPU竞争，但1000m之后如果CPU正在被使用其则仍然无法抢占。而Thread.sleep(0)的作用就是提醒OS立即发起一次CPU竞争
