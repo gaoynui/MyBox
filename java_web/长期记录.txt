@@ -57,6 +57,14 @@ table使用Enumeration(枚举类)
 map使用iterator（迭代类）
 同步不同，哈希值不同
 
+HashMap和TreeMap的区别
+（1）HashMap:适用于在Map中插入、删除和定位元素。
+（2）Treemap:适用于按自然顺序或自定义顺序遍历键（key）。
+（3）HashMap通常比TreeMap快一点（树和哈希表的数据结构使然），建议多使用HashMap,在需要排序的Map时候才用TreeMap.
+（4）HashMap 非线程安全 TreeMap 非线程安全
+（5）HashMap的结果是没有排序的，而TreeMap输出的结果是排好序的。
+（6）TreeMap:基于红黑树实现。TreeMap没有调优选项，因为该树总处于平衡状态。
+
 iterator可以删除元素，enumeration不行
 
 HashSet:
