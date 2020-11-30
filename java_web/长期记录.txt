@@ -146,6 +146,7 @@ JAVA线程的两种创建方式：
 装箱：int->integer
 拆箱：integer->int
 integer必须实例化后才可使用
+装箱过程是通过调用包装器的valueOf方法实现的，而拆箱过程是通过调用包装器的 xxxValue方法实现的。（xxx代表对应的基本数据类型）。
 | 基本类型 | 包装器类型 |
 | -------- | ---------- |
 | int      | Integer    |
