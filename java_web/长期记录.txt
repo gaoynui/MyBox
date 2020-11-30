@@ -142,9 +142,20 @@ JAVA线程的两种创建方式：
 而是叫普通方法的调用。
 实现runnable接口
 
-装箱与拆箱是基本数据类型之间的转换。
+装箱与拆箱是基本数据类型和包装器类型之间的转换。
 装箱：int->integer
+拆箱：integer->int
 integer必须实例化后才可使用
+| 基本类型 | 包装器类型 |
+| -------- | ---------- |
+| int      | Integer    |
+| long     | Long       |
+| float    | Float      |
+| double   | Double     |
+| char     | Character  |
+| byte     | Byte       |
+| boolean  | Boolean    |
+| short    | Short      |
 
 import只能导到当前层
 
