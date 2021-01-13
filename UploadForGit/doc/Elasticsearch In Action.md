@@ -23,7 +23,7 @@ Solr:是Lucene更高一级的封装，类似ES
 
 1.ES集群
 
-<img src="C:\Users\yang10.gao\Desktop\doc\pics\ES集群.png" alt="ES集群" style="zoom:67%;" />
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\ES\ES集群.png" style="zoom:67%;" />
 
 2.标识Document
 
@@ -33,7 +33,7 @@ index name + type name + document ID = uniquely document
 
 3.Document的特点（内在一致性，可嵌套，结构灵活）
 
-<img src="C:\Users\yang10.gao\Desktop\doc\pics\ES-document的特点.png" alt="ES-document的特点" style="zoom:67%;" />
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\ES\ES-document的特点.png" style="zoom:67%;" />
 
 4.mapping
 
@@ -44,7 +44,7 @@ index name + type name + document ID = uniquely document
 
 5.shards,replica和node的关系
 
-<img src="C:\Users\yang10.gao\Desktop\doc\pics\ES-shards,replica和node的关系.png" alt="ES-shards,replica和node的关系" style="zoom:67%;" />
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\ES\ES-shards,replica和node的关系.png" style="zoom:67%;" />
 
 ```
 A shard is a Lucene index: a directory of files containing an inverted index. An inverted index is a structure that enable ES to tell you which document contains a term(a word) without having to look at all the documents.
@@ -65,7 +65,7 @@ curl "localhost:9200/+get-toge*,-get-together/_search"
 
 7.ES返回的数据模板
 
-<img src="C:\Users\yang10.gao\Desktop\doc\pics\ES-返回的数据模板.png" alt="ES-返回的数据模板" style="zoom:67%;" />
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\ES\ES-返回的数据模板.png" style="zoom:67%;" />
 
 8.过滤模板
 
@@ -129,7 +129,7 @@ boolean
 
 3.Analyzer
 
-<img src="C:\Users\yang10.gao\Desktop\doc\pics\ES-analyzer.png" alt="ES-analyzer" style="zoom:67%;" />
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\ES\ES-analyzer.png" style="zoom:67%;" />
 
 ```
 默认的，index会进行analyze，如果希望某field不被analyze，需要这样设置：
@@ -180,7 +180,7 @@ include_in_all 是否包含在_all中
 
 6.更新已有的document
 
-<img src="C:\Users\yang10.gao\Desktop\doc\pics\ES-updatingExistingDocuments.png" alt="ES-updatingExistingDocuments" style="zoom: 50%;" />
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\ES\ES-updatingExistingDocuments.png" style="zoom:67%;" />
 
 ```
 curl -XPOST 'localhost:9200/index/type/id/_update' -d '{
@@ -235,13 +235,13 @@ curl -XPOST 'localhost:9200/index/_open'
 5.sort默认的规则以score排序
 ```
 
-<img src="C:\Users\yang10.gao\Desktop\doc\pics\ES-_source自定义返回.png" alt="ES-_source自定义返回" style="zoom:67%;" />
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\ES\ES-_source自定义返回.png" style="zoom:67%;" />
 
 2.match query
 
 operator:
 
-<img src="C:\Users\yang10.gao\Desktop\doc\pics\ES-matchQueryWithOperatorAnd.png" alt="ES-matchQueryWithOperatorAnd" style="zoom:67%;" />
+![](C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\ES\ES-matchQueryWithOperatorAnd.png)
 
 type:
 
@@ -284,21 +284,21 @@ phrase_prefix
 
 5.query类型的选择
 
-<img src="C:\Users\yang10.gao\Desktop\doc\pics\ES-query类型的选择.png" alt="ES-query类型的选择" style="zoom:67%;" />
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\ES\ES-query类型的选择.png" style="zoom:67%;" />
 
 #### Chapter 5 Analyzing your data
 
 1.custom analyzer 定制分析器工作原理
 
-<img src="C:\Users\yang10.gao\Desktop\doc\pics\ES-customAnalyzer.png" alt="ES-customAnalyzer" style="zoom:67%;" />
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\ES\ES-customAnalyzer.png" style="zoom:67%;" />
 
 character filtering -> breaking into tokens -> token filtering -> token indexing
 
 2.创建index同时设置分析器
 
-<img src="C:\Users\yang10.gao\Desktop\doc\pics\ES-index创建时添加customAnalyzer1.png" alt="ES-index创建时添加customAnalyzer1" style="zoom:67%;" />
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\ES\ES-index创建时添加customAnalyzer1.png" style="zoom:67%;" />
 
-<img src="C:\Users\yang10.gao\Desktop\doc\pics\ES-index创建时添加customAnalyzer2.png" alt="ES-index创建时添加customAnalyzer2" style="zoom:67%;" />
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\ES\ES-index创建时添加customAnalyzer2.png" style="zoom:67%;" />
 
 3.specifying the analyzer for a field in the mapping
 
@@ -381,7 +381,7 @@ reply:
 
 3.带有filter的aggs
 
-<img src="C:\Users\yang10.gao\Desktop\doc\pics\ES-带有filter的aggs.png" alt="ES-带有filter的aggs" style="zoom:67%;" />
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\ES\ES-带有filter的aggs.png" style="zoom:67%;" />
 
 4.博客
 

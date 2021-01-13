@@ -1,4 +1,4 @@
-## Spark
+Spark
 
 ------
 
@@ -22,7 +22,7 @@
 
 3. 通用性
 
-   <img src="C:\Users\yang10.gao\Desktop\doc\pics\spark\通用性.png" style="zoom:67%;" />
+   <img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\spark\通用性.png" style="zoom:80%;" />
 
 4. 兼容性
 
@@ -72,7 +72,7 @@
 
 ​	(5)一个列表，存储存取每个Partition的优先位置（preferred location）。对于一个HDFS文件来说，这个列表保存的就是每个Partition所在的块的位置。按照“移动数据不如移动计算”的理念，Spark在进行任务调度的时候，会尽可能地将计算任务分配到其所要处理数据块的存储位置。
 
-​	<img src="C:\Users\yang10.gao\Desktop\doc\pics\spark\RDD解析过程.png" style="zoom: 67%;" />
+![](C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\spark\RDD解析过程.png)
 
 2.两种操作：Transformation & Action
 
@@ -118,7 +118,7 @@
 
 3.宽依赖和窄依赖
 
-​	![](C:\Users\yang10.gao\Desktop\doc\pics\spark\宽窄依赖.png)
+​	![](C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\spark\宽窄依赖.png)
 
 #### 五、广播和累加器
 
@@ -128,7 +128,7 @@
 
 ​	2.广播变量
 
-​		<img src="C:\Users\yang10.gao\Desktop\doc\pics\spark\广播变量.png" style="zoom:67%;" />
+​		<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\spark\广播变量.png" style="zoom:67%;" />
 
 ```scala
 // 定义广播变量,变量一旦被定义为一个广播变量，那么这个变量只能读，不能修改
@@ -154,7 +154,7 @@ val c = broadcast.value
 
 ​		在spark应用程序中，我们经常会有这样的需求，如异常监控，调试，记录符合某特性的数据的数目，这种需求都需要用到计数器，如果一个变量不被声明为一个累加器，那么它将在被改变时不会再driver端进行全局汇总，即在分布式运行时每个task运行的只是原始变量的一个副本，并不能改变原始变量的值，但是当这个变量被声明为累加器后，该变量就会有分布式计数的功能。
 
-​		<img src="C:\Users\yang10.gao\Desktop\doc\pics\spark\累加器变量.png" style="zoom:67%;" />
+​		<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\spark\累加器变量.png" style="zoom:67%;" />
 
 ```scala
 // 定义一个累加器
@@ -246,7 +246,7 @@ val b = a.value
 
 ​			原本能够正常执行的Spark作业，某天突然报出OOM（内存溢出）异常，观察异常栈，是我们写的业务代码造成的。这种情况比较少见。
 
-​		<img src="C:\Users\yang10.gao\Desktop\doc\pics\spark\数据倾斜.png" style="zoom: 33%;" />
+​		<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\spark\数据倾斜.png" style="zoom: 50%;" />
 
 ​	3.shuffle调优
 

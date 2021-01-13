@@ -8,7 +8,7 @@
 
 ## 核心组件
 
-![](https://dpzbhybb2pdcj.cloudfront.net/luksa/HighResolutionFigures/figure_1-9.png)
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\k8s\核心组件.png" style="zoom: 50%;" />
 
 - #### etcd
 
@@ -84,7 +84,7 @@ pod是可以创建和管理K8s计算的最小可部署单元。一个Pod代表�
 
 每个Pod都会被分配唯一一个IP地址。
 
-<img src="https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/pod%E5%86%85%E9%83%A8.png?raw=true" alt="pod内部" style="zoom:50%;" />
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\k8s\pod内部.png" style="zoom:50%;" />
 
 每个pod都有一个特殊的被称为根容器的pause容器(initContainer)，pause容器对应的镜像数据K8S平台的一部分。
 
@@ -130,8 +130,6 @@ NodePort
 LoadBalancer
 
 提供负载均衡。每个服务需要一个独立的外网IP。但Ingress可以让多个服务使用同一个外网IP。
-
-<img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g1hbo422ynj30y60de76w.jpg" style="zoom: 50%;" />
 
 Ingress
 
