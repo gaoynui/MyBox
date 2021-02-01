@@ -180,5 +180,10 @@ git checkout master
 git pull origin master
 git merge dev
 git push origin master
+
+git pull 发生冲突:
+放弃本地修改:
+git reset --hard
+git pull
 ```
 

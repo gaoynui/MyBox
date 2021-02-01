@@ -69,6 +69,7 @@ hive偏向分析处理(OLAP)，而非事务处理
 
 ```
 原始数据：
+cookieid,createtime,pv
 cookie1,2015-04-10,1
 cookie1,2015-04-11,5
 cookie1,2015-04-12,7
