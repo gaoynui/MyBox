@@ -1,4 +1,4 @@
-conda & mamba
+conda & zsh
 
 ------
 
@@ -8,7 +8,7 @@ conda & mamba
 
 Conda 是一个开源的软件包管理系统和环境管理系统，用于安装多个版本的软件包及其依赖关系，并在它们之间轻松切换。 Conda 是为 Python 程序创建的，适用于 Linux，OS X 和Windows，也可以打包和分发其他软件。
 
-conda分为anaconda和miniconda。anaconda是包含一些常用包的版本（这里的常用不代表你常用 微笑.jpg），miniconda则是精简版，需要啥装啥，所以推荐使用miniconda。
+conda分为anaconda和miniconda。anaconda是包含一些常用包的版本，miniconda则是精简版，需要啥装啥，所以推荐使用miniconda。
 
 2.安装
 
@@ -109,5 +109,25 @@ mamba repoquery search
 	mamba repoquery depends 库名
 指定库被哪些库依赖：
 	mamba repoquery whoneeds ipython
+```
+
+------
+
+## zsh
+
+Zsh 属于 Shell 的一种，和 Bash 一样，但比 Bash 更好用，Zsh 完全兼容 Bash，拥有极其丰富的插件，其强大的自动补全参数、文件名以及自定义功能，可以大大提高我们使用 Linux 的效率。
+
+```
+查看有哪些shell:
+cat /etc/shells
+```
+
+```
+安装zsh:
+sudo yum install zsh
+安装oh-my-zsh
+
+卸载oh-my-zsh:
+uninstall_oh_my_zsh
 ```
 
