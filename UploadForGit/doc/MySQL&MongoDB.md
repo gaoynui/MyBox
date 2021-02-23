@@ -295,3 +295,55 @@ create index PIndex on user (pid);
 show index from [table];
 ```
 
+## JOIN细说
+
+```
+a_table:
+a_id,a_name,a_age
+1,老潘,30
+2,老王,32
+3,老张,31
+4,老李,30
+
+b_table:
+b_id,b_name,b_age
+2,老王,32
+3,老张,31
+5,老刘,29
+6,老改,40
+```
+
+内连接(inner join):
+
+select * from a_table a ***inner join*** b_table b on a.a_id=b.b_id;
+
+```
+a_id,a_name,a_age,b_id,b_name,b_age
+2,老王,32,2,老王,32
+3,老张,31,3,老张,31
+```
+
+左外连接(left join / left outer join):
+
+select * from a_table a ***left join*** b_table b on a.a_id=b.b_id;
+
+```
+a_id,a_name,a_age,b_id,b_name,b_age
+2,老王,32,2,老王,32
+3,老张,31,3,老张,31
+1,老潘,30,NULL,NULL,NULL
+4,老李,30,NULL,NULL,NULL
+```
+
+右外连接(right join / right outer join):
+
+select * from a_table a ***right join*** b_table b on a.a_id=b.b_id;
+
+```
+a_id,a_name,a_age,b_id,b_name,b_age
+2,老王,32,2,老王,32
+3,老张,31,3,老张,31
+NULL,NULL,NULL,5,老刘,29
+NULL,NULL,NULL,6,老改,40
+```
+

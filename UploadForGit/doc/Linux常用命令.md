@@ -16,6 +16,7 @@ ls -al
 rmdir ./test
 # 删除目录及子目录、文件
 rmdir ./test2 -rf
+rm -r test
 ```
 
 ```

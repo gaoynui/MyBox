@@ -53,3 +53,14 @@ if(json.has("a")) {}
 String value = json.get("a").toString();
 ```
 
+## 对象以标准String形式输出
+
+```
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@Autowired
+    ObjectMapper objectMapper;
+    
+String result = objectMapper.writeValueAsString(Class/JSON/Object);
+```
+

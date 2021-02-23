@@ -7,8 +7,10 @@ s.top 栈顶指针
 EnQueue(&q,x)入队
 DeQueue(&q, &x)出队
 q.rear/q.front 队尾头指针，队尾进队头出
+队头指针指向对头位置，队尾指针指向队尾下一个位置
 队满：(q.rear + 1) % MaxSize = q.front
 队列元素：(q.rear - q.front + Maxsize) % Maxsize
+
 
 二叉树：
 所有结点数等于所有度数加1

@@ -35,15 +35,10 @@ string s2 = "abc"
 超过127的整数不放在常量池中，浮点数无常量池。
 String s = new String("hello" + "world")实际上只创建了两个对象，一个s在堆中；"hello"和"world"会在编译时自动优化成一个字符串放入常量池。
 
-hadoop分布式基础架构
-zookeeper 是hadoop子项目
-
 dubbo
 Dubbo是阿里巴巴公司开源的一个高性能优秀的分布式服务框架，使得应用可通过高性能的 RPC 实现服务的输出和输入功能，可以和Spring框架无缝集成。
 Dubbo是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。
 RPC remote procedure call
-
-JSON javaScript object notation轻量级数据交换格式
 
 线程安全：
 list下vector
@@ -91,7 +86,7 @@ object类常见三种方法：toSpring\equals\hashCode
 重写equals()，hashcode()
 先通过hashcode来比较，如果hashcode相等，那么就用equals方法来比较两个对象是否相等
 
-serializable可序列化
+serializable可序列化(Java 提供了一种对象序列化的机制，该机制中，一个对象可以被表示为一个字节序列，该字节序列包括该对象的数据、有关对象的类型的信息和存储在对象中数据的类型。检验一个类的实例是否能序列化十分简单， 只需要查看该类有没有实现 java.io.Serializable接口。)
 synchronized同步的
 
 static不能使用this
@@ -165,8 +160,6 @@ integer必须实例化后才可使用
 | byte     | Byte       |
 | boolean  | Boolean    |
 | short    | Short      |
-
-import只能导到当前层
 
 对不确定数量的参数：
 public void getDays(Integer ... days) {
