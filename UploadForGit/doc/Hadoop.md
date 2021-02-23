@@ -1,8 +1,12 @@
 ## Hadoop
 
+------
+
 ​                                                                                  hadoop架构
 
 ![](https://pennywong.gitbooks.io/hadoop-notebook/content/pic/architecture.png)
+
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\hive\hiveServer.jpg" style="zoom:67%;" />
 
 ### 1.Zookeeper
 
@@ -110,7 +114,7 @@ DataNode：（1）存放Block块，负责其读写和赋值操作。
 
 ### 3.MapReduce
 
-MapReduce是一种非常简单又非常强大的编程模型。
+MapReduce是一种非常简单又非常强大的**编程模型**。
 
 简单在于其编程模型只包含map和reduce两个过程，map的主要输入是一对<key , value>值，经过map计算后输出一对<key , value>值；然后将相同key合并，形成<key , value集合>；再将这个<key , value集合>输入reduce，经过计算输出零个或多个<key , value>对。
 
@@ -128,15 +132,15 @@ Container:对资源的一层抽象。
 
 三大组件：
 
-**ResourceManager**:整个系统只有一个RM负责资源调度，包含了两个子组件：定时调用器(Scheduler)和应用管理器(ApplicationManager)。
+1.**ResourceManager**:整个系统只有一个RM负责资源调度，包含了两个子组件：定时调用器(Scheduler)和应用管理器(ApplicationManager)。
 
-定时调度器： 它只负责向应用程序分配资源，当 Client 提交一个任务的时候，它会根据所需要的资源以及当前集群的资源状况进行分配。
+​			定时调度器： 它只负责向应用程序分配资源，当 Client 提交一个任务的时候，它会根据所需要的资源以及当前集群的资源状况进行分配。
 
-应用管理器：负责监控应用的工作，管理Client用户提交的应用。
+​			应用管理器：负责监控应用的工作，管理Client用户提交的应用。
 
-**ApplicationMaster**： 每当 Client 提交一个 Application 时候，就会新建一个 ApplicationMaster 。由这个 ApplicationMaster 去与 ResourceManager 申请容器资源，获得资源后会将要运行的程序发送到容器上启动，然后进行分布式计算。 数据量太大时移动数据成本很高，所以选择移动应用发送到对应容器里启动。
+2.**ApplicationMaster**： 每当 Client 提交一个 Application 时候，就会新建一个 ApplicationMaster 。由这个 ApplicationMaster 去与 ResourceManager 申请容器资源，获得资源后会将要运行的程序发送到容器上启动，然后进行分布式计算。 数据量太大时移动数据成本很高，所以选择移动应用发送到对应容器里启动。
 
-**NodeManager**: ResourceManager 在每台机器的上代理，负责容器的管理，并监控他们的资源使用情况（cpu，内存，磁盘及网络等），以及向 ResourceManager/Scheduler 提供这些资源使用报告。 
+3.**NodeManager**: ResourceManager 在每台机器的上代理，负责容器的管理，并监控他们的资源使用情况（cpu，内存，磁盘及网络等），以及向 ResourceManager/Scheduler 提供这些资源使用报告。 
 
 ### 5.部署单机模式和伪分布模式Hadoop
 

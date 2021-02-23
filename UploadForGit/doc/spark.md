@@ -191,6 +191,8 @@ val b = a.value
 
 ​		（9）TaskScheduler：将TaskSet提交给Worker（集群）运行，每个Executor运行什么Task就是在此处分配的。
 
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\spark\job允许流程.png" style="zoom:67%;" />
+
 ​	2.两种运行模式
 
 ​		[Spark On Yarn的两种模式yarn-cluster和yarn-client深度剖析](https://www.cnblogs.com/ittangtang/p/7967386.html)
@@ -291,5 +293,8 @@ sc.parallelize(array, n)
 conf = new SparkConf().setMater("local[*]")
 # 配置参数
 con = new SparkConf().set("spark.defalut.parallelism", "5")
+# RDD重分区
+sqcTemp = spark.createDataFrame(List)
+sqc = sqcTemp.repartition(n)
 ```
 
