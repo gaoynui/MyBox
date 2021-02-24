@@ -2,6 +2,53 @@ Elasticsearch In Action
 
 ------
 
+```
+倒排索引(反向索引):
+下面三个文件:
+Document0 = "it is what it is"
+Document1 = "what is it"
+Document2 = "it is a document"
+
+每个元素对文件的索引:
+ "a":      {2}
+ "document": {2}
+ "is":     {0, 1, 2}
+ "it":     {0, 1, 2}
+ "what":   {0, 1}
+ 
+ 查询 "what is it":
+ {0,1} ∩ {0,1,2} ∩ {0,1,2} = {0,1}
+```
+
+```
+// match & match_phrase
+match会分词，对全文只要发现和搜索条件相关的doc都会出现在最终结果里
+match_phrase会将给定的短语当成一个完整的查询条件
+
+// keyword & text
+keyword类型不会建立分词，“张三李四”只会以“张三李四”一起查询
+text会建立分词，“张三李四”会查询到“张三”和“李四”
+如果匹配一个字段既能全词搜索也能分词搜索，可以新添加一个field，同原来field维护相同的数据
+
+//************************
+term和match_phrase作用于数据上，指定数据对应的字段是否为完全匹配。
+加不加keyword作用在查询的query上，指定这个query是否需要分词。
+如:
+  term+title.keyword搜小猪佩奇,加keyword就只搜小猪佩奇，而term表示数据的title必须完全匹配小猪佩奇。
+  term+title搜小猪佩奇，这里title为text类型，会进行分词，也就是现在title必须完全匹配小猪或者佩奇。
+  match_phrase+title.keyword搜小猪佩奇，title必须完全匹配小猪佩奇。
+  match_phrase+title搜小猪佩奇，title必须包含小猪佩奇。
+```
+
+```
+Mysql      vs      ES
+Database           Index                     库
+Table              Type                      表/分类
+Row                Document                  数据
+Column             Field                     字段
+Schema             Mapping                   映射关系
+```
+
 #### Chapter 1 Introducing Elasticsearch
 
 1.json格式的string值可以是日期，ES能够自动识别

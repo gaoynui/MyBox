@@ -4,6 +4,8 @@
 
 ## 目录结构
 
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\gradle\gradle目录结构.png" style="zoom:150%;" />
+
 ### build.gradle
 代表了app Module的构建脚本，它定义了应用于本模块的构建规则
 ### gradle.properties

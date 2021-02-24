@@ -113,3 +113,10 @@ docker build -t [生成的镜像名称] .
 docker run [生成的镜像名]
 ```
 
+### docker镜像生命轨迹
+
+![](C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\docker\docker镜像的生命轨迹.jpg)
+
+### docker搭建单节点本地服务器集群架构
+
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\docker\docker搭建单节点本地服务器集群架构.jpg" style="zoom:80%;" />

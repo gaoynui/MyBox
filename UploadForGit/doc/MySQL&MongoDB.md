@@ -140,8 +140,6 @@ ex:
 mysql>select * from springdemo.user;
 ```
 
-<img src="https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF.png?raw=true" alt="用户信息" style="zoom: 67%;" />
-
 10.mysqlworkbench GUI管理数据库
 
 下载：[下载地址](https://www.mysql.com/cn/products/workbench/)
@@ -296,6 +294,8 @@ show index from [table];
 ```
 
 ## JOIN细说
+
+<img src="C:\Users\yang10.gao\Desktop\MyBox\UploadForGit\doc\pics\databases\sql-join.png" style="zoom: 50%;" />
 
 ```
 a_table:
