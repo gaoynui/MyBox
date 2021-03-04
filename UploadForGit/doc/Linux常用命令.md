@@ -58,6 +58,8 @@ free
 df
 # 显示系统jincheng
 top/htop
+# 显示目录或文件大小
+du
 ```
 
 ```
