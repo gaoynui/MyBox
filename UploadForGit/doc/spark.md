@@ -169,7 +169,7 @@ val b = a.value
 
 ​			2、累加器不是一个调优的操作，因为如果不这样做，结果是错的
 
-#### 六、Spark运行流程
+#### 六、Spark运行流程（job = n * stage）(stage = m * task)
 
 ​	1.基本概念
 
@@ -181,13 +181,13 @@ val b = a.value
 
 ​		（4）Worker：集群中可以运行Application代码的节点。在Standalone模式中指的是通过slave文件配置的worker节点，在Spark on Yarn模式中指的就是NodeManager节点。
 
-​		（5）Task：在Executor进程中执行任务的工作单元，多个Task组成一个Stage
+​		（5）Task：在Executor进程中执行任务的**工作单元**，多个Task组成一个Stage
 
 ​		（6）Job：包含多个Task组成的并行计算，是由Action行为触发的
 
 ​		（7）Stage：每个Job会被拆分很多组Task，作为一个TaskSet，其名称为Stage
 
-​		（8）DAGScheduler：根据Job构建基于Stage的DAG，并提交Stage给TaskScheduler，其划分Stage的依据是RDD之间的依赖关系
+​		（8）DAGScheduler：根据Job构建基于Stage的DAG(有向无环图)，并**提交Stage给TaskScheduler**，其划分Stage的依据是RDD之间的依赖关系
 
 ​		（9）TaskScheduler：将TaskSet提交给Worker（集群）运行，每个Executor运行什么Task就是在此处分配的。
 
@@ -196,6 +196,13 @@ val b = a.value
 ​	2.两种运行模式
 
 ​		[Spark On Yarn的两种模式yarn-cluster和yarn-client深度剖析](https://www.cnblogs.com/ittangtang/p/7967386.html)
+
+```
+1.YarnCluster的Driver是在集群的某一台NM上，但是Yarn-Client就是在RM的机器上； 
+2.而Driver会和Executors进行通信，所以Yarn_cluster在提交App之后可以关闭Client，而Yarn-Client不可以； 
+```
+
+
 
 #### 七、SparkCore调优
 
@@ -296,5 +303,10 @@ con = new SparkConf().set("spark.defalut.parallelism", "5")
 # RDD重分区
 sqcTemp = spark.createDataFrame(List)
 sqc = sqcTemp.repartition(n)
+# config配置
+.config("spark.sql.files.openCostInBytes", "4194304") # 4MB
+.config("spark.sql.shuffle.partitions", "10") # 分片下小文件数据量
+# coalesce
+spark.sql("select * from sour_table").coalesce(10).write.format("hive").mode("Append").partitionBy("imp_date").saveAsTable("des_table")
 ```
 

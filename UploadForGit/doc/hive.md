@@ -41,7 +41,7 @@ hive偏向分析处理(OLAP)，而非事务处理
 
 ​	1.用户接口：
 
-​		CLI/shell，jdbc/odbc
+​		CLI/shell，jdbc/odbc(微软)，web
 
 ​	2.跨语言服务(thrift server)：
 

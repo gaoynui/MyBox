@@ -3,9 +3,23 @@
 特点：
 
 - key-value存储系统
+
 - 所有操作均在内存完成
+
 - 去中心化分布集群
+
 - 支持持久化
+
+  ```
+  Redis有两种持久化的方式：快照（RDB:redis db）和追加式文件（AOF）：
+  
+  RDB持久化方式会在一个特定的间隔保存那个时间点的一个数据快照。
+  AOF持久化方式则会记录每一个服务器收到的写操作。在服务启动时，这些记录的操作会逐条执行从而重建出原来的数据。写操作命令记录的格式跟Redis协议一致，以追加的方式进行保存。
+  Redis的持久化是可以禁用的，就是说你可以让数据的生命周期只存在于服务器的运行时间里。
+  两种方式的持久化是可以同时存在的，但是当Redis重启时，AOF文件会被优先用于重建数据。
+  ```
+
+  
 
 启动：
 
@@ -28,26 +42,30 @@
 ## 命令
 
 ```
-# 设置键值对
+# string: 设置键值对
 >set key value
 >get key
 # 删除键值对
 >del key
-# 哈希：设置一个key对应多个value
+
+# Hash: 设置一个key对应多个value
 >hmset key field1 value1 field2 value2
 >hget key field1
-# 列表：以列表形式存储值
+
+# list: 以列表形式存储值
 >lpush key value1
 >lpush key value2
 >lpush key value3
 
 >lrange key 0 len
-# 集合：元素唯一
+
+# set: 元素唯一
 >sadd key value1
 >sadd key value2
 
 >smembers key
-# 有序集合zset
+
+# sorted set
 >zadd key score value1
 >zadd key score value2
 

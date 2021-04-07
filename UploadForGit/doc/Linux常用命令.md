@@ -56,7 +56,7 @@ uname -a
 free
 # 查看系统磁盘使用情况
 df
-# 显示系统jincheng
+# 显示系统进程
 top/htop
 # 显示目录或文件大小
 du
@@ -69,5 +69,14 @@ chmod 777 test.sh
 chmod 777 test -r <== -r
 # 更改文件的所有者或组
 chown dev:group test.sh
+```
+
+```
+# 忽略sighub信号
+nohub
+# 后台运行
+&
+# -d 作为后台守护进程(daemon)运行
+airflow webserver -d 
 ```
 
